@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8" />
+  <base href="/" />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.2.65/css/materialdesignicons.min.css" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css' />
+  
+  <style>
+    html, body {font-family: "PT Sans", sans-serif; margin:0; padding:0;}
+    body {font-size:120%; margin:0; padding:0;}
+
+    header {
+      display: block; 
+      background:#343a5a url('i/starry.jpg') no-repeat center top;
+      background-size: 100%;
+      color:white;
+      text-align:center;
+      padding:1em;
+      min-width: 24em;
+      font-size:160%;
+    }
+    
+    h2 {font-size:200%; z-index: 2}
+    
+    header h1 {margin: 4.5em 0 0.2em 0; font-size:160%; }
+    .logo {position: absolute; font-size:70%; top: 2em; left:2em;}
+    .logo a {color: white}
+    .description {width: 24em; margin:0 auto;}
+    .device {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 3em;
+        left: 0;
+        right: 0;
+        height: 15%;
+        width: 80%;
+        min-width: 24em;
+        max-width: 1200px;
+        max-height: 160px;
+        background: url(i/device.png) no-repeat center;
+        background-size:100%;
+     
+    }
+    
+    .salt {width: 60%; min-width: 600px; margin:0 auto;}
+    
+    .iconed {
+      position: relative;
+      padding-left: 250px;
+      margin:3em 0;
+      min-height:200px;
+    }
+    
+    .iconed h2 {margin-bottom:0.2em}
+    .iconed ul {margin:0; padding:0}
+    .iconed li {list-style-type:none; padding: .5em 0}
+    
+    .bigicon {
+      position: absolute;
+      left:0px; 
+      top: 30px;
+      margin-right: 2em;
+      font-size: 350%; 
+      display: inline-block; 
+      float: left;
+    }
+    
+    .bigicon img {width:200px}
+    
+    .paper {
+      width: 60%;
+      margin:0 auto;
+      min-width: 600px;
+      padding: 2em 3em 3em 4em;
+      border:solid 1px #ccc; 
+      box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+    }
+    
+    .paper h2 {text-align:center}
+    .paper ul {margin:0 0 0 1em; max-width: 500px}
+    .paper li {padding: 0.2em;}
+    
+
+    .monitoring {
+      position: relative;
+      height:520px;
+      overflow: hidden;
+    }
+    
+    .monitoring .salt {z-index: 3}
+    
+    #graph1 {width:3000px; height:500px; position:absolute; top: 0; left:-200px;}
+    
+    path {
+        stroke: steelblue;
+        stroke-width: 1;
+        fill: none;
+    }
+    
+    .screenshots {
+      position: relative;
+      height: 700px; 
+      margin: 6em 0;
+      text-align:center;
+    }
+    .monitor {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 4em;
+        left: 0;
+        right: 0;
+        height: 639px;
+        background: url(i/monitor2.png) no-repeat center;
+    }
+    
+    .screen {
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      width: 732px;
+      height: 442px;
+      top: 33px;
+      left: 0;
+      right: 0;
+      background:rgba(255,140,0,0.1) url(i/screen-login.gif) no-repeat center 3%;
+      background-size: 730px;
+      cursor: pointer;
+    
+    }
+    
+    #screen {cursor: pointer; z-index:3}
+    .footer {font-size:160%; text-align:center; padding: 2em 2em 6em 2em}
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="/..">Сигналтек</a>
+    </div>
+    
+    <div class="device">
+    </div>
+    
+    <h1>Lookus</h1>
+    
+    <div class="description">
+      Агрегатор-балансировщик трафика для 10-и гигабитных оптических каналов
+    </div>
+  </header>  
+
+  <div class="salt">
+  
+    <div class="iconed">
+      <div class="bigicon" style="margin-top:30px">
+        64+64
+      </div>
+
+      <h2>Формула</h2>
+      <ul>
+        <li>До 64 RX + 64 TX портов</li>
+        <li>Режимы: 1 GbE, 10 GbE, 40 GbE</li>
+        <li>Каждый порт одновременно работает на вход и выход</li>
+        <li>Корпус 1U для монтирования в стойку</li>
+      </ul>
+    </div>
+
+    
+    <div class="iconed">
+      <div class="bigicon">
+        <img src="i/balancing.png" />
+      </div>
+
+      <h2>Балансировка</h2>
+      <ul>
+        <li>Симметричная</li>
+        <li>Five tuple</li>
+        <li>По MAC-адресам</li>
+        <li>По IP-адресам</li>
+      </ul>
+    </div>
+
+    
+    <div class="iconed">
+      <div class="bigicon">
+        <img src="i/filtering.png" />
+      </div>
+
+      <h2>Фильтрация</h2>
+      <ul>
+        <li>10к+ не блокирующих фильтров</li>
+        <li>Фильтры по Ethertype</li>
+        <li>Фильтры по by MAC, Port, IP</li>
+        <li>Поддержка VLAN, MPLS</li>
+        <li>DPI-фильтры</li>
+      </ul>
+    </div>
+
+    
+    <div class="iconed">
+      <div class="bigicon">
+        <img src="i/aggregation.png" />
+      </div>
+
+      <h2>Агрегация</h2>
+      <ul>
+        <li>Агрегация из нескольких в один</li>
+        <li>Агрегация с фильтрацией</li>
+        <li>Loopback (внутреннее замыкание TX на RX)</li>
+        <li>Force up</li>
+      </ul>
+    </div>
+    
+  </div>
+
+  
+  <div class="monitoring">
+    <div id="graph1"></div>
+    
+    <div class="salt">
+      <div class="iconed">
+        <h2>Встроенный мониторинг</h2>
+        <ul>
+          <li>Мониторинг в реальном времени</li>
+          <li>Агрегация статистики</li>
+          <li>Статистика по скорости и ошибкам на портах</li>
+          <li>Графики</li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+
+  <div class="paper">
+        
+
+      <h2>Возможности устройства</h2>
+      <ul>
+<li>
+Mirroring, Redirect, Drop трафика
+</li><li>
+Агрегация/балансировка трафика из нескольких 10GbE портов в 10/40 GbE порты
+</li><li>
+Поддержка балансировки трафика с MPLS
+</li><li>
+Управляемая балансировка трафика по критериям:
+  <ul>
+  <li>  
+  MAC + MAC (simmetrize)
+  </li><li>
+  MAC source + MAC destination – IP + IP (simmetrize)
+  </li><li>
+  IP source + IP destination
+  </li><li>
+  IP + Port + ProtoType (5 tuple)
+  </li><li>
+  EtherType
+  </li></ul>  
+</li><li>
+Фильтрация сетевого трафика (до 128 тыс. фильтров) по критериям:
+  <ul>
+    <li>EtherType</li>
+    <li>MAC source, MAC destination с поддержкой маски – IP source, IP destination с поддержкой маски</li>
+    <li>Port source, Port destination с поддержкой маски – ProtoType</li>
+    <li>VLAN с поддержкой маски</li>
+    <li>VLAN2 с поддержкой маски</li>
+  </ul>
+</li><li>        
+Удаленное управление через web-интерфейс
+</li><li>        
+Просмотр статистики загрузки и ошибок на интерфейсах
+</li><li>        
+Возможность доработки под специфические требования заказчика
+</li>        
+    </ul>
+ 
+    <h2>Технические характеристики</h2>
+    <ul>
+    <li>
+    Порты: 48 х 1/10GbE SFP+ (48 TX + 48 RX) и 4 х 10/40GbE QSFP+
+    </li><li>
+    Общее количество Tx/Rx портов до 128
+    </li><li>
+    Не блокируемая коммутационная матрица производительностью 1,28 Тб/c
+    </li><li>
+    Пропускная способность до 960 Mpps
+    </li><li>
+    Низкая задержка (latency) — 500 нс
+    </li><li>
+    Поддержка Jumbo frame 12К
+    </li><li>
+    Пакетный буфер — 9 МБ
+    </li><li>
+    Резервирование и «горячая замена» питания и охлаждения
+    </li><li>
+    Максимальная потребляемая мощность до 450 Вт
+    </li><li>
+    Конструктив 1RU
+    </li><li>
+    Габаритные размеры (ВxШxГ): 44 x 435 x 394 мм
+    </li><li>
+    Вес 9,5 кг
+    </li>
+    </ul>      
+    
+  </div>
+
+  <div class="screenshots">
+    <h2>Простой, но умный пользовательский интерфейс</h2>
+    
+    <div class="monitor">
+      <div class="screen" id="screen" onClick="changeImg();">
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    
+    Почта для связи: <a href="mailto:order@signaltech.ru">order@signaltech.ru</a>
+    
+  </div>
+</body>
+<script src="http://mbostock.github.com/d3/d3.v2.js"></script>
+<script src="monitoring.js"></script>
+  
+<script>
+  var screens = ['i/screen-login.gif', 'i/screen-ports.png', 'i/screen-rules.png', 'i/screen-graphic.png'];
+  var l = screens.length;
+  var pointer = 0;
+  var scrimg = document.getElementById('screen');
+  
+  var interval = window.setInterval(function() {changeImg();}, 9000);
+  
+  function changeImg() {
+    pointer++;
+    if (pointer>=l) {
+      pointer = 0;
+    }
+    scrimg.style.backgroundImage = 'url(' + screens[pointer] + ')';
+    //scrimg.src = screens[pointer];
+  }
+</script>
+
+  
+</html>

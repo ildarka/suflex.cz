@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8" />
+  <base href="/" />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.2.65/css/materialdesignicons.min.css" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css' />
+  
+  <style>
+    html, body {font-family: 'Roboto', sans-serif; margin:0; padding:0;}
+    body {font-size:120%; margin:0; padding:0;}
+
+    header {
+      display: block; 
+      background:#343a5a url('i/starry.jpg') no-repeat center top;
+      background-size: 100%;
+      color:white;
+      text-align:center;
+      padding:1em;
+      min-width: 24em;
+      font-size:160%;
+    }
+    
+    h2 {font-size:200%; z-index: 2}
+    
+    header h1 {margin: 4.5em 0 0.2em 0; font-size:160%; }
+    .logo {position: absolute; font-size:70%; top: 2em; left:2em; letter-spacing: 0.2em;}
+    .description {width: 24em; margin:0 auto;}
+    .device {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 2em;
+        left: 0;
+        right: 0;
+        height: 15%;
+        width: 80%;
+        background: url(i/device.png) no-repeat center;
+        background-size:100%;
+     
+    }
+    
+    .salt {width: 60%; min-width: 600px; margin:0 auto;}
+    
+    .iconed {
+      position: relative;
+      padding-left: 250px;
+      margin:3em 0;
+      min-height:200px;
+    }
+    
+    .iconed h2 {margin-bottom:0.2em}
+    .iconed ul {margin:0; padding:0}
+    .iconed li {list-style-type:none; padding: .5em 0}
+    
+    .bigicon {
+      position: absolute;
+      left:0px; 
+      top: 30px;
+      margin-right: 2em;
+      font-size: 350%; 
+      display: inline-block; 
+      float: left;
+    }
+    
+    .bigicon img {width:200px}
+    
+    .paper {
+      width: 60%;
+      margin:0 auto;
+      min-width: 600px;
+      padding: 2em 3em 3em 4em;
+      border:solid 1px #ccc; 
+      box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+    }
+    
+    .paper h2 {text-align:center}
+    .paper ul {margin:0 0 0 1em;}
+    .paper li {padding: 0.2em;}
+    
+    .screenshots {
+      position: relative;
+      height: 700px; 
+      margin: 6em 0;
+      text-align:center;
+    }
+    
+    .monitoring {
+      position: relative;
+      height:520px;
+      overflow: hidden;
+    }
+    
+    .monitoring .salt {z-index: 3}
+    
+    #graph1 {width:3000px; height:500px; position:absolute; top: 0; left:-200px;}
+    
+    path {
+        stroke: steelblue;
+        stroke-width: 1;
+        fill: none;
+    }
+    
+    .monitor {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 3em;
+        left: 0;
+        right: 0;
+        height: 639px;
+        background: url(i/monitor2.png) no-repeat center;
+    }
+    
+    .screen {
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      width: 732px;
+      height: 442px;
+      top: 33px;
+      left: 0;
+      right: 0;
+      background:rgba(255,140,0,0.1) url(i/screen-login.gif) no-repeat center 3%;
+      background-size: 730px;
+      cursor: pointer;
+    
+    }
+    
+    #screen {cursor: pointer; z-index:3}
+    .footer {font-size:160%; text-align:center; padding: 2em 2em 6em 2em}
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      SUFLEX
+    </div>
+    
+    <div class="device">
+    </div>
+    
+    <h1>Suflex NPB</h1>
+    
+    <div class="description">
+      Suflex Network Packet Brocker for smart
+commutations in 10 GbE networks for reasonable price  
+    </div>
+  </header>  
+
+  <div class="salt">
+  
+    <div class="iconed">
+      <div class="bigicon" style="margin-top:30px">
+        64+64
+      </div>
+
+      <h2>Formula</h2>
+      <ul>
+        <li>Up to 64 RX & 64 TX ports</li>
+        <li>Support 1 GbE, 10 GbE, 40 GbE</li>
+        <li>Each port simultaneously RX & TX</li>
+        <li>Rack mount 1U</li>
+      </ul>
+    </div>
+
+    
+    <div class="iconed">
+      <div class="bigicon">
+        <img src="i/balancing.png" />
+      </div>
+
+      <h2>Load balancing</h2>
+      <ul>
+        <li>Simmetric balancing</li>
+        <li>Five tuple balancing</li>
+        <li>Balancing by MAC</li>
+        <li>Balancing by IP</li>
+      </ul>
+    </div>
+
+    
+    <div class="iconed">
+      <div class="bigicon">
+        <img src="i/filtering.png" />
+      </div>
+
+      <h2>Filtering</h2>
+      <ul>
+        <li>10k+ non-blocking filters</li>
+        <li>Filters by Ethertype</li>
+        <li>Filters by MAC, Port, IP</li>
+        <li>Support VLAN</li>
+        <li>Deep packet inspection</li>
+      </ul>
+    </div>
+
+    
+    <div class="iconed">
+      <div class="bigicon">
+        <img src="i/aggregation.png" />
+      </div>
+
+      <h2>Aggregation</h2>
+      <ul>
+        <li>Simple traffic aggregation</li>
+        <li>Aggregation with filters</li>
+        <li>Loopback on port</li>
+        <li>Force up</li>
+      </ul>
+    </div>
+    
+  </div>
+
+  
+  <div class="monitoring">
+    <div id="graph1"></div>
+    
+    <div class="salt">
+      <div class="iconed">
+        <h2>Built-in monitoring</h2>
+        <ul>
+          <li>Realtime & aggregate statistic</li>
+          <li>Bitrate on each port & rule</li>
+          <li>Drops, CRC-erros</li>
+          <li>Graphics</li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+
+  <div class="paper">
+    
+    <h2>Technical details</h2>
+    <ul>
+      <li>
+        48 х 1/10GbE SFP+ (48 TX + 48 RX) and 4 х 10/40GbE QSFP+ ports
+      </li><li>
+      Up to 128 RX/TX ports
+      </li><li>
+      Non-blocking matrix (bandwidth up to 1,28 Tb/s)
+      </li><li>
+      Packet load up to 960 Mpps
+      </li><li>
+      Low latency 500 nanoseconds
+      </li><li>
+      12K Jumbo frame support
+      </li><li>
+      Packet buffer — 9 Mb
+      </li><li>
+      Fault tolerance and hot-swap
+      </li><li>
+      Power consumption up to 450 W
+      </li><li>
+      1U
+      </li><li>
+      Dimension (HxWxD): 44 x 435 x 394 mm
+      </li><li>
+      Weight 9,5 kg
+      </li><li>
+      Mirroring, redirect, drop
+      </li><li>
+      Each port is independent for RX/TX
+      </li><li>
+      Force up mode
+      </li><li>
+      Aggregation/balancing from 10 GbE ports into 10/40 GbE ports – MPLS support
+      </li><li>
+      Management traffic balancing based on following rules:
+      </li><li>
+      MAC + MAC (symmetric)
+      </li><li>
+      MAC source + MAC destination – IP + IP (symmetric)
+      </li><li>
+      IP source + IP destination
+      </li><li>
+      IP + Port + ProtoType (5 tuple) – EtherType
+      </li><li>
+      Traffic filtering based on following rules:
+      </li><li>
+      EtherType
+      </li><li>
+      MAC source, MAC destination (with mask support) – IP source, IP destination (with mask support)
+      </li><li>
+      Port source, port destination (with mask support)
+      </li><li>
+      ProtoType
+      </li><li>
+      VLAN
+      </li><li>
+      VLAN2
+      </li><li>
+      DPI (packet payload)
+      </li><li>
+      Remote management via web-interface
+      </li><li>
+      Monitoring statistics of load and errors on interfaces – SNMP support
+      </li><li>
+      CLI
+      </li><li>
+      VLAN, VLAN2 tagging
+      </li><li>
+      Ability for customization
+      </li>
+      </ul>  
+    
+  </div>
+
+  <div class="screenshots">
+    <h2>Simple but smart user interface</h2>
+    
+    <div class="monitor">
+      <div class="screen" id="screen" onClick="changeImg();">
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    
+    Contact email <a href="mailto:order@suflex.cz">order@suflex.cz</a>
+    
+  </div>
+</body>
+<script src="http://mbostock.github.com/d3/d3.v2.js"></script>
+<script src="monitoring.js"></script>
+  
+<script>
+  var screens = ['i/screen-login.gif', 'i/screen-ports.png', 'i/screen-rules.png', 'i/screen-graphic.png'];
+  var l = screens.length;
+  var pointer = 0;
+  var scrimg = document.getElementById('screen');
+  
+  var interval = window.setInterval(function() {changeImg();}, 9000);
+  
+  function changeImg() {
+    pointer++;
+    if (pointer>=l) {
+      pointer = 0;
+    }
+    scrimg.style.backgroundImage = 'url(' + screens[pointer] + ')';
+    //scrimg.src = screens[pointer];
+  }
+</script>
+
+  
+</html>
